@@ -1,0 +1,25 @@
+{
+  "name": "awesome-star-rating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "starrating.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oandreazza/awesome-star-rating.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oandreazza/awesome-star-rating/issues"
+  },
+  "homepage": "https://github.com/oandreazza/awesome-star-rating#readme",
+  "devDependencies": {
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1"
+  }
+}
