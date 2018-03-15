@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "7"
 
-script: karma start tests/karma.conf.js --single-run
+script: npm test
 
 #before_install:
 # - export CHROME_BIN=/usr/bin/google-chrome
