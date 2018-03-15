@@ -1,10 +1,8 @@
-
-
 describe("Rating Start core", function(){
 
 
     beforeEach(function(){
-        var $container = $("<div id='rating'>")
+        var $container = $("<div id='rating'></div>")
 
         $('body').append($container);
 
@@ -13,7 +11,7 @@ describe("Rating Start core", function(){
     })
 
     it('should create container with 5 stars as default', function(){
-        expect($('.rating-container rating-option').length).toBe(5)
+        expect($('.rating-container .rating-option').length).toBe(5)
     });
 
 });

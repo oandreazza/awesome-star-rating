@@ -14,10 +14,9 @@ module.exports = function(config) {
 
       // list of files / patterns to load in the browser
       files: [
-        '../libsjquery-3.3.1.min', // dirty hack for including jQuery
-        'http://knockoutjs.com/downloads/knockout-3.4.0.debug.js',
-        'starrating.js',
-        'spec/*.js'
+        '../libs/jquery-3.3.1.min.js', // dirty hack for including jQuery
+        '../starrating.js',
+        '../spec/*.js'
       ],
 
       // list of files to exclude
