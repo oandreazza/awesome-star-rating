@@ -6,7 +6,7 @@ module.exports = function(config) {
       basePath: '',
 
       // plugins starting with karma- are autoloaded
-      plugins: ['karma-chrome-launcher', 'karma-jasmine', 'karma-spec-reporter'],
+      plugins: ['karma-chrome-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-mocha-reporter'],
 
       // frameworks to use
       // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -32,7 +32,7 @@ module.exports = function(config) {
       // test results reporter to use
       // possible values: 'dots', 'progress'
       // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-      reporters: ['spec'],
+      reporters: ['mocha'],
 
       // web server port
       port: 9876,
