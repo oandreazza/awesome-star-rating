@@ -1,4 +1,4 @@
-describe("Rating Start core", function(){
+describe("Rating Star core", function(){
 
 
     beforeEach(function(){
@@ -31,6 +31,7 @@ describe("Rating Start core", function(){
 
     afterEach(function() {
         $('#rating').remove();
+        $('#value').remove();
     });
 
 });
