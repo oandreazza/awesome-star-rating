@@ -7,6 +7,11 @@ describe("Rating Start core", function(){
         $('body').append($container);
 
         $container.rating();
+
+        $container.on('rating:rate','.rating-option', function(event, value,identifier, fillRating){
+            $("#value").html(value)
+            fillRating()
+        });
     })
 
     it('should create container with 5 stars as default', function(){
@@ -18,8 +23,9 @@ describe("Rating Start core", function(){
         expect($('.rating-container .filled').length).toBe(2)
     });
 
+
     afterEach(function() {
-        $('#multiselect').remove();
+        $('#rating').remove();
     });
 
 });

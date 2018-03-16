@@ -6,7 +6,7 @@ module.exports = function(config) {
       basePath: '',
 
       // plugins starting with karma- are autoloaded
-      plugins: ['karma-chrome-launcher', 'karma-jasmine'],
+      plugins: ['karma-chrome-launcher', 'karma-jasmine', 'karma-spec-reporter'],
 
       // frameworks to use
       // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -15,6 +15,7 @@ module.exports = function(config) {
       // list of files / patterns to load in the browser
       files: [
         '../libs/jquery-3.3.1.min.js', // dirty hack for including jQuery
+        '../starrating.css',
         '../starrating.js',
         '../spec/*.js'
       ],
@@ -31,7 +32,7 @@ module.exports = function(config) {
       // test results reporter to use
       // possible values: 'dots', 'progress'
       // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-      reporters: ['progress'],
+      reporters: ['spec'],
 
       // web server port
       port: 9876,
