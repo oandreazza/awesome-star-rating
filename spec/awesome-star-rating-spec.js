@@ -2,14 +2,15 @@ describe("Rating Star core", function(){
 
 
     beforeEach(function(){
-        var $container = $("<div id='rating'></div>")
-        var $ratingValue = $('<span id="value"></span>')
+        var $container      = $('<div id="rating-container"></div>')
+        var $rating         = $("<div id='rating'></div>")
+        var $ratingValue    = $('<span id="value"></span>')
+        $container.append($rating, $ratingValue);
+        $('body').append($container);
 
-        $('body').append($container, $ratingValue);
+        $rating.rating();
 
-        $container.rating();
-
-        $container.on('rating:rate','.rating-option', function(event, value,identifier, fillRating){
+        $rating.on('rating:rate','.rating-option', function(event, value,identifier, fillRating){
             $ratingValue.html(value)
             fillRating()
         });
@@ -24,14 +25,13 @@ describe("Rating Star core", function(){
         expect($('.rating-container .filled').length).toBe(2)
     });
 
-    it('should print the value of the star clicked', function(){
+    it('should print the value of clicked star ', function(){
         $('.rating-container .rating-option').eq(3).trigger('click');
         expect($('#value').text()).toBe('2')
     });
 
     afterEach(function() {
-        $('#rating').remove();
-        $('#value').remove();
+        $('#rating-container').remove();
     });
 
 });
