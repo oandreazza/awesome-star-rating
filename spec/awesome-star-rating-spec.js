@@ -30,6 +30,15 @@ describe("Rating Star core", function(){
         expect($('#value').text()).toBe('2')
     });
 
+    it('should click twice to clean selected star', function(){
+        $('.rating-container .rating-option').eq(3).trigger('click');
+        $('.rating-container .rating-option').eq(3).trigger('click');
+        
+        expect($('.rating-container .filled').length).toBe(0)
+    });
+
+
+
     afterEach(function() {
         $('#rating-container').remove();
     });
