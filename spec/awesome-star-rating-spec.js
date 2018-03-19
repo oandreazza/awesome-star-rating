@@ -37,6 +37,14 @@ describe("Rating Star core", function(){
         expect($('.rating-container .filled').length).toBe(0)
     });
 
+    it('should change star after selected', function(){
+        $('.rating-container .rating-option').eq(3).trigger('click');
+        expect($('.rating-container .filled').length).toBe(2)
+
+        $('.rating-container .rating-option').eq(4).trigger('click');
+        expect($('.rating-container .filled').length).toBe(1)
+    });
+
 
 
     afterEach(function() {
