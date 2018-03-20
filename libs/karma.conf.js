@@ -15,7 +15,7 @@ module.exports = function(config) {
       // list of files / patterns to load in the browser
       files: [
         '../libs/jquery-3.3.1.min.js', // dirty hack for including jQuery
-        '../src/starrating.css',
+        '../public/deploy/starrating-1.0.0.css',
         '../public/deploy/starrating-min-1.0.0.js',
         '../tests/specs/*.js'
       ],
