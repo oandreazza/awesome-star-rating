@@ -16,7 +16,7 @@ module.exports = function(config) {
       files: [
         '../libs/jquery-3.3.1.min.js', // dirty hack for including jQuery
         '../src/starrating.css',
-        '../src/starrating.js',
+        '../public/deploy/starrating-min-1.0.0.js',
         '../tests/specs/*.js'
       ],
 
