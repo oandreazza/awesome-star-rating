@@ -4,7 +4,7 @@
   "description": "",
   "main": "starrating.js",
   "scripts": {
-    "test": "karma start spec/karma.conf.js --single-run"
+    "test": "karma start libs/karma.conf.js --single-run"
   },
   "repository": {
     "type": "git",
