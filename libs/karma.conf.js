@@ -6,7 +6,7 @@ module.exports = function(config) {
       basePath: '',
 
       // plugins starting with karma- are autoloaded
-      plugins: ['karma-chrome-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-mocha-reporter'],
+      plugins: ['karma-chrome-launcher', 'karma-jasmine', 'karma-coverage', 'karma-spec-reporter', 'karma-mocha-reporter'],
 
       // frameworks to use
       // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -27,12 +27,17 @@ module.exports = function(config) {
       // preprocess matching files before serving them to the browser
       // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
       preprocessors: {
+        '/src/*.js': ['coverage']
       },
 
       // test results reporter to use
       // possible values: 'dots', 'progress'
       // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-      reporters: ['mocha'],
+      reporters: ['progress', 'coverage'],
+
+      coverageReporter: {
+        reporters: [{type: 'lcov'}]
+      }, 
 
       // web server port
       port: 9876,
